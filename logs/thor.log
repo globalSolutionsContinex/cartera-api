@@ -1,0 +1,27 @@
+2020-02-25 20:13:21,190 - Client Repository - ERROR - syntax error at or near "id"
+LINE 3:     ('{'id': '01aa532d464d43bfa8b63144537d8d4d', 'name': 'gs...
+                ^
+
+2020-02-25 20:15:43,268 - Client Repository - ERROR - syntax error at or near "id"
+LINE 3:     ('{'id': 'f0e2c26a1e234a9b99f686e771109211', 'name': 'gs...
+                ^
+
+2020-02-25 20:17:05,218 - Client Repository - ERROR - syntax error at or near "id"
+LINE 3:     ('{'id': '7d5e3f757803476c806602c9641e5666', 'name': 'gs...
+                ^
+
+2020-02-25 21:16:28,119 - Client Repository - ERROR - syntax error at or near "id"
+LINE 3:     ('{'id': '8d08ec32857b42bf88a95f4b328011ad', 'name': 'gs...
+                ^
+
+2020-02-25 21:21:23,109 - Client Repository - ERROR - syntax error at or near "id"
+LINE 3:     ('[{'id': '1e5f21999dc644acb4f66dd14fbfeb8d', 'name': 'g...
+                 ^
+
+2020-02-25 21:22:38,144 - Client Repository - ERROR - there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+2020-02-25 21:26:42,327 - Client Repository - ERROR - current transaction is aborted, commands ignored until end of transaction block
+
+2020-02-25 21:28:44,682 - Client Repository - ERROR - cannot call json_populate_recordset on an object
+
+2020-02-25 21:29:19,495 - Postgres - ERROR - no results to fetch
