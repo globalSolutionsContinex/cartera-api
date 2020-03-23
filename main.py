@@ -22,4 +22,4 @@ app.register_blueprint(client_controller, url_prefix=f'{prefix}/client')
 
 if __name__ == "__main__":
     logger.info("--------------- Init Cartera Api -------------")
-    app.run()
+    app.run(port=80)

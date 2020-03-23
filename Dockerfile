@@ -10,6 +10,6 @@ WORKDIR /var/www
 RUN pip3 install -r requirements.txt
 RUN chmod +x run.sh
 
-EXPOSE 5000
+EXPOSE 80
 
 CMD ["python3", "main.py"]
