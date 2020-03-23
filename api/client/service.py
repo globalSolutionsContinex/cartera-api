@@ -1,10 +1,12 @@
 import json
 import uuid
 from api.client import repository
+import infrastructure.log as log
 
 
 class Client:
     def __init__(self, config):
+        self.logger = log.get_logger("Client")
         self.config = config
         self.repo = repository.Repo(self.config.POSGRES)
         self.client_attrs = ["id", "name", "payment"]
@@ -55,6 +57,7 @@ class Client:
         return self.repo.get_clients_by_year(year)
 
     def create(self, request):
+        self.logger.info("create new client")
         client_f = json.loads(request.data)
         client_f["id"] = uuid.uuid4().hex
         periods = self.build_periods(client_f["periods"], client_f["id"])

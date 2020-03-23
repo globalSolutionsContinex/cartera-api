@@ -1,10 +1,12 @@
 from flask import Blueprint, Response, request
 import api.client.service as service
+import infrastructure.log as log
 import json
 
 
 def get_client_controller(config):
 
+    logger = log.get_logger("get_client_controller")
     client_b = Blueprint("client", __name__)
     client_service = service.Client(config)
 
@@ -21,7 +23,7 @@ def get_client_controller(config):
 
     def send_error(error_msg, func_name, data):
         error = {"error": f"{func_name} error: {str(error_msg)}", "data": data}, 400
-        print(error)
+        logger.info(error[0]["error"])
         return error
 
     def send_response(success_message, func_name, func, **args):

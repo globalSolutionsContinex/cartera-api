@@ -54,8 +54,7 @@ class Connector:
         rowcount = cursor.rowcount
         try:
             data = list(cursor.fetchall())
-        except Exception as ex:
-            logger.error(str(ex))
+        except Exception as _:
             data = []
         self.connection.commit()
         cursor.close()
